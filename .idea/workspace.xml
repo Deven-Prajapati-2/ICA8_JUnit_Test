@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="Setup JUnit by following intellij blog">
+    <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="Added fileReader method and it's JUnit testCases">
+      <change afterPath="$PROJECT_DIR$/data/urinal.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Urinals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Urinals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UrinalsTest.goodString">
+  <component name="RunManager" selected="JUnit.UrinalsTest.readFile">
+    <configuration name="Urinals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Urinals" />
+      <module name="ICA8_JUnit_Test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CalculatorTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ICA8_JUnit_Test" />
       <option name="PACKAGE_NAME" value="" />
@@ -70,8 +80,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UrinalsTest.readFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ICA8_JUnit_Test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
+      <option name="METHOD_NAME" value="readFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UrinalsTest.readFile" />
+        <item itemvalue="Application.Urinals" />
         <item itemvalue="JUnit.UrinalsTest.goodString" />
         <item itemvalue="JUnit.CalculatorTest.add" />
       </list>
@@ -93,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666905033983</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added goodString method and it's JUnit testcase to validate whether string contains only '1' &amp; '0'">
+      <created>1666913867661</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666913867661</updated>
+    </task>
+    <task id="LOCAL-00003" summary="removed unnecessary files">
+      <created>1666914003915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666914003915</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +145,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup JUnit by following intellij blog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup JUnit by following intellij blog" />
+    <MESSAGE value="Added goodString method and it's JUnit testcase to validate whether string contains only '1' &amp; '0'" />
+    <MESSAGE value="removed unnecessary files" />
+    <MESSAGE value="Added fileReader method and it's JUnit testCases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fileReader method and it's JUnit testCases" />
   </component>
 </project>
