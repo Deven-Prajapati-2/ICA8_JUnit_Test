@@ -11,8 +11,7 @@ import java.util.ArrayList;
 public class Urinals {
     public static void main(String[] args) {}
 
-    public ArrayList<String> readFile() { // read file and parse all strings
-        String path = "C:/Users/Devsec/Desktop/DevGit/ICA8_JUnit_Test/data/urinal.dat";
+    public ArrayList<String> readFile(String path) throws Exception { // read file and parse all strings
         ArrayList<String> urinalsStrings = new ArrayList<>();
         try {
             BufferedReader reader;
@@ -24,7 +23,7 @@ public class Urinals {
                 line = reader.readLine();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw e;
         }
         return urinalsStrings;
     }
@@ -84,8 +83,7 @@ public class Urinals {
             }
             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
             for(int i=0;i<maxFreeUrinalCount.length;i++) {
-                writer.write(Integer.toString(maxFreeUrinalCount[i]));
-                writer.write("\n");
+                writer.write(maxFreeUrinalCount[i] + "\n");
             }
             writer.write("EOF");
             writer.close();

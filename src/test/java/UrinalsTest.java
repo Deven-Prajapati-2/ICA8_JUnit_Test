@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,7 +20,13 @@ class UrinalsTest {
         expectedUrinalsStrings.add("0000");
         expectedUrinalsStrings.add("01000");
         expectedUrinalsStrings.add("011");
-        assertEquals(expectedUrinalsStrings,urinals.readFile());
+        String path = "data\\urinal.dat";
+        try {
+            assertEquals(expectedUrinalsStrings,urinals.readFile(path));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
@@ -42,20 +49,20 @@ class UrinalsTest {
     @Test
     void createOutputFile() {
         Urinals urinals = new Urinals();
-        ArrayList<String> expectedOutputFile = new ArrayList<>();
-        expectedOutputFile.add("1");
-        expectedOutputFile.add("2");
-        expectedOutputFile.add("3");
+        ArrayList<Integer> expectedOutputFile = new ArrayList<>();
+        expectedOutputFile.add(1);
+        expectedOutputFile.add(2);
+        expectedOutputFile.add(3);
         int[] testArray = {1,2,3};
         String path = urinals.createOutputFile(testArray);
-        ArrayList<String> actualOutputFile = new ArrayList<>();
+        ArrayList<Integer> actualOutputFile = new ArrayList<>();
         try {
             BufferedReader reader;
             reader = new BufferedReader(new FileReader(path));
             String line = reader.readLine();
             while(line != null) {
                 if(line.equals("-1") || line.equals("EOF")) break;
-                actualOutputFile.add(line);
+                actualOutputFile.add(Integer.parseInt(line));
                 line = reader.readLine();
             }
         } catch (IOException e) {
@@ -84,5 +91,19 @@ class UrinalsTest {
         Urinals urinals = new Urinals();
         System.out.println("====== Deven Prajapati == TEST SIX EXECUTED =======");
         assertFalse(urinals.goodString("1010101210"));
+    }
+
+    @Test
+    void readWrongFile() {
+        Urinals urinals = new Urinals();
+        System.out.println("====== Deven Prajapati == TEST SEVEN EXECUTED =======");
+        String path = "data1\\urinal.dat";
+        try {
+            Throwable exception = assertThrows(FileNotFoundException.class, () -> urinals.readFile(path));
+            assertEquals("data1\\urinal.dat (The system cannot find the path specified)", exception.getMessage());
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
