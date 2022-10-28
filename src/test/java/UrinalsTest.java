@@ -54,7 +54,7 @@ class UrinalsTest {
         expectedOutputFile.add(2);
         expectedOutputFile.add(3);
         int[] testArray = {1,2,3};
-        String path = urinals.createOutputFile(testArray);
+        String path = urinals.createOutputFile(testArray,"rule.txt");
         ArrayList<Integer> actualOutputFile = new ArrayList<>();
         try {
             BufferedReader reader;
@@ -118,5 +118,14 @@ class UrinalsTest {
         catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    @Test
+    void duplicateWriteFile() {
+        Urinals urinals = new Urinals();
+        System.out.println("====== Deven Prajapati == TEST TEN EXECUTED =======");
+        int arr[] = {1,2,3};
+        String path1 = urinals.createOutputFile(arr,"rule.txt");
+        String path2 = urinals.createOutputFile(arr,"rule.txt");
+        assertNotEquals(path1,path2);
     }
 }

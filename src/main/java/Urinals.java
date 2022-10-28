@@ -70,8 +70,8 @@ public class Urinals {
         }
     }
 
-    public String createOutputFile(int[] maxFreeUrinalCount) {
-        File outputFile = new File("rule.txt");
+    public String createOutputFile(int[] maxFreeUrinalCount, String fileName) {
+        File outputFile = new File(fileName);
         try {
             int count = 1, LOOP_COUNT = 100;
             while (LOOP_COUNT > 0) {
