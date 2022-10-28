@@ -82,25 +82,38 @@ class UrinalsTest {
     @Test
     void checkEmptyStringLength() {
         Urinals urinals = new Urinals();
-        System.out.println("====== Deven Prajapati == TEST FIVE EXECUTED =======");
+        System.out.println("====== Deven Prajapati == TEST SIX EXECUTED =======");
         assertFalse(urinals.goodString(""));
     }
 
     @Test
     void checkStringIsBinary() {
         Urinals urinals = new Urinals();
-        System.out.println("====== Deven Prajapati == TEST SIX EXECUTED =======");
+        System.out.println("====== Deven Prajapati == TEST SEVEN EXECUTED =======");
         assertFalse(urinals.goodString("1010101210"));
     }
 
     @Test
     void readWrongFile() {
         Urinals urinals = new Urinals();
-        System.out.println("====== Deven Prajapati == TEST SEVEN EXECUTED =======");
+        System.out.println("====== Deven Prajapati == TEST EIGHT EXECUTED =======");
         String path = "data1\\urinal.dat";
         try {
             Throwable exception = assertThrows(FileNotFoundException.class, () -> urinals.readFile(path));
             assertEquals("data1\\urinal.dat (The system cannot find the path specified)", exception.getMessage());
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    void readEmptyFile() {
+        Urinals urinals = new Urinals();
+        System.out.println("====== Deven Prajapati == TEST NINE EXECUTED =======");
+        String path = "data\\emptyFile.dat";
+        ArrayList<String> expectedUrinalsStrings = new ArrayList<>();
+        try {
+            assertEquals(expectedUrinalsStrings,urinals.readFile(path));
         }
         catch (Exception e) {
             e.printStackTrace();
