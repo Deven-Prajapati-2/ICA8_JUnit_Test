@@ -51,9 +51,28 @@ class UrinalsTest {
         Urinals urinals = new Urinals();
         ArrayList<Integer> expectedOutputFile = new ArrayList<>();
         expectedOutputFile.add(1);
-        expectedOutputFile.add(2);
+        expectedOutputFile.add(0);
         expectedOutputFile.add(3);
-        int[] testArray = {1,2,3};
+        expectedOutputFile.add(2);
+        expectedOutputFile.add(1);
+        ArrayList<String> urinalStrings = new ArrayList<>();
+        try {
+            urinalStrings = urinals.readFile("data\\urinal.dat");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        int size = urinalStrings.size();
+        int[] testArray = new int[size];
+        for(int i=0;i<urinalStrings.size();i++) {
+            int count;
+            if(urinals.goodString(urinalStrings.get(i))) {
+                count = urinals.countMaximumFreeUrinals(urinalStrings.get(i));
+            } else {
+                count = -1;
+            }
+            testArray[i] = count;
+        }
         String path = "rule.txt";
         try {
             path = urinals.createOutputFile(testArray, "rule.txt");
@@ -129,16 +148,33 @@ class UrinalsTest {
     void duplicateWriteFile() {
         Urinals urinals = new Urinals();
         System.out.println("====== Deven Prajapati == TEST TEN EXECUTED =======");
-        int[] arr = new int[]{1,2,3};
+        ArrayList<String> urinalStrings = new ArrayList<>();
+        try {
+            urinalStrings = urinals.readFile("data\\urinal.dat");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        int size = urinalStrings.size();
+        int[] testArray = new int[size];
+        for(int i=0;i<urinalStrings.size();i++) {
+            int count;
+            if(urinals.goodString(urinalStrings.get(i))) {
+                count = urinals.countMaximumFreeUrinals(urinalStrings.get(i));
+            } else {
+                count = -1;
+            }
+            testArray[i] = count;
+        }
         String path1 = "rule.txt",path2 = "rules.txt";
         try {
-            path1 = urinals.createOutputFile(arr, "rule.txt");
+            path1 = urinals.createOutputFile(testArray, "rule.txt");
         }
         catch (Exception e) {
             e.printStackTrace();
         }
         try {
-            path2 = urinals.createOutputFile(arr, "rule.txt");
+            path2 = urinals.createOutputFile(testArray, "rule.txt");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -149,10 +185,27 @@ class UrinalsTest {
     void badNameFileWrite() {
         Urinals urinals = new Urinals();
         System.out.println("====== Deven Prajapati == TEST ELEVEN EXECUTED =======");
-        int[] arr = new int[]{1,2,3};
+        ArrayList<String> urinalStrings = new ArrayList<>();
+        try {
+            urinalStrings = urinals.readFile("data\\urinal.dat");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        int size = urinalStrings.size();
+        int[] testArray = new int[size];
+        for(int i=0;i<urinalStrings.size();i++) {
+            int count;
+            if(urinals.goodString(urinalStrings.get(i))) {
+                count = urinals.countMaximumFreeUrinals(urinalStrings.get(i));
+            } else {
+                count = -1;
+            }
+            testArray[i] = count;
+        }
         String badFileName = "ru/@le.txt";
         try {
-            Throwable exception = assertThrows(FileNotFoundException.class, () -> urinals.createOutputFile(arr,badFileName));
+            Throwable exception = assertThrows(FileNotFoundException.class, () -> urinals.createOutputFile(testArray,badFileName));
             assertEquals("ru\\@le.txt (The system cannot find the path specified)", exception.getMessage());
         }
         catch (Exception e) {
