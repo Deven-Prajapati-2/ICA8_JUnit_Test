@@ -1,8 +1,16 @@
 import java.io.*;
 import java.util.ArrayList;
-
+/**
+ * Urinals class to find count of maximum free urinals
+ * it has methods to:
+ * read input file and parse string and then validate each strings
+ * write output for each string in a file
+ *
+ * @author Deven Prajapati
+ */
 public class Urinals {
     public static void main(String[] args) {}
+
     public ArrayList<String> readFile() { // read file and parse all strings
         String path = "C:/Users/Devsec/Desktop/DevGit/ICA8_JUnit_Test/data/urinal.dat";
         ArrayList<String> urinalsStrings = new ArrayList<>();
@@ -13,7 +21,6 @@ public class Urinals {
             while(line != null) {
                 if(line.equals("-1") || line.equals("EOF")) break;
                 urinalsStrings.add(line);
-                System.out.println(line);
                 line = reader.readLine();
             }
         } catch (IOException e) {
@@ -21,6 +28,7 @@ public class Urinals {
         }
         return urinalsStrings;
     }
+
     public Boolean goodString(String str) {  // checks to see if valid string
         int n = str.length();
         if(n < 1 || n > 20) return false;
@@ -28,11 +36,13 @@ public class Urinals {
         for(int i=0;i<n-1;i++) if(str.charAt(i) == '1' && str.charAt(i+1) == '1') return false;
         return true;
     }
+
     public int countMaximumFreeUrinals(String str) {
         int[] maxCount = {0};
         backtrack(str,0,0,maxCount);
         return maxCount[0];
     }
+
     public void backtrack(String str, int index, int changeCount, int[] maxCount) {
         int n = str.length();
         if(index == n) {
@@ -60,6 +70,7 @@ public class Urinals {
             backtrack(newStr,index+1,changeCount+1,maxCount);
         }
     }
+
     public String createOutputFile(int[] maxFreeUrinalCount) {
         File outputFile = new File("rule.txt");
         try {

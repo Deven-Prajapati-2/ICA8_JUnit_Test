@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="Added countFreeMaximumUrinals method using recursion and it's JUnit testCases">
+    <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="Added createOutputFile method and it's JUnit testCases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/urinal.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/urinal.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Urinals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Urinals.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" afterDir="false" />
     </list>
@@ -51,10 +52,19 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UrinalsTest.createOutputFile">
+  <component name="RunManager" selected="JUnit.UrinalsTest">
     <configuration name="Urinals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Urinals" />
       <module name="ICA8_JUnit_Test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UrinalsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ICA8_JUnit_Test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,16 +89,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UrinalsTest.goodString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ICA8_JUnit_Test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
-      <option name="METHOD_NAME" value="goodString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UrinalsTest.readFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ICA8_JUnit_Test" />
       <option name="PACKAGE_NAME" value="" />
@@ -101,11 +101,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UrinalsTest" />
         <item itemvalue="JUnit.UrinalsTest.createOutputFile" />
         <item itemvalue="Application.Urinals" />
         <item itemvalue="JUnit.UrinalsTest.countMaximumFreeUrinals" />
         <item itemvalue="JUnit.UrinalsTest.readFile" />
-        <item itemvalue="JUnit.UrinalsTest.goodString" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666919802580</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added createOutputFile method and it's JUnit testCases">
+      <created>1666925807358</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666925807358</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +180,7 @@
     <MESSAGE value="removed unnecessary files" />
     <MESSAGE value="Added fileReader method and it's JUnit testCases" />
     <MESSAGE value="Added countFreeMaximumUrinals method using recursion and it's JUnit testCases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added countFreeMaximumUrinals method using recursion and it's JUnit testCases" />
+    <MESSAGE value="Added createOutputFile method and it's JUnit testCases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added createOutputFile method and it's JUnit testCases" />
   </component>
 </project>

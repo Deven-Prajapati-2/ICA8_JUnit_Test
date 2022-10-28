@@ -21,12 +21,14 @@ class UrinalsTest {
         expectedUrinalsStrings.add("011");
         assertEquals(expectedUrinalsStrings,urinals.readFile());
     }
+
     @Test
     void goodString() {
         Urinals urinals = new Urinals();
         System.out.println("====== Deven Prajapati == TEST TWO EXECUTED =======");
         assertTrue(urinals.goodString("1010101"));
     }
+
     @Test
     void countMaximumFreeUrinals() {
         Urinals urinals = new Urinals();
