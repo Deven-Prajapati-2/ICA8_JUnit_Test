@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="Added createOutputFile method and it's JUnit testCases">
+    <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="minor refactor and cleaning code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/urinal.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/urinal.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Urinals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Urinals.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,14 +50,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UrinalsTest">
-    <configuration name="Urinals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Urinals" />
-      <module name="ICA8_JUnit_Test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UrinalsTest.checkStringIsBinary">
     <configuration name="UrinalsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ICA8_JUnit_Test" />
       <option name="PACKAGE_NAME" value="" />
@@ -69,11 +60,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UrinalsTest.countMaximumFreeUrinals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UrinalsTest.checkEmptyStringLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ICA8_JUnit_Test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
-      <option name="METHOD_NAME" value="countMaximumFreeUrinals" />
+      <option name="METHOD_NAME" value="checkEmptyStringLength" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UrinalsTest.checkStringIsBinary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ICA8_JUnit_Test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
+      <option name="METHOD_NAME" value="checkStringIsBinary" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UrinalsTest.checkStringLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ICA8_JUnit_Test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
+      <option name="METHOD_NAME" value="checkStringLength" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,23 +100,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UrinalsTest.readFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ICA8_JUnit_Test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
-      <option name="METHOD_NAME" value="readFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UrinalsTest.checkStringIsBinary" />
+        <item itemvalue="JUnit.UrinalsTest.checkEmptyStringLength" />
+        <item itemvalue="JUnit.UrinalsTest.checkStringLength" />
         <item itemvalue="JUnit.UrinalsTest" />
         <item itemvalue="JUnit.UrinalsTest.createOutputFile" />
-        <item itemvalue="Application.Urinals" />
-        <item itemvalue="JUnit.UrinalsTest.countMaximumFreeUrinals" />
-        <item itemvalue="JUnit.UrinalsTest.readFile" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666925807358</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="minor refactor and cleaning code">
+      <created>1666926259300</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666926259300</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +189,7 @@
     <MESSAGE value="Added fileReader method and it's JUnit testCases" />
     <MESSAGE value="Added countFreeMaximumUrinals method using recursion and it's JUnit testCases" />
     <MESSAGE value="Added createOutputFile method and it's JUnit testCases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added createOutputFile method and it's JUnit testCases" />
+    <MESSAGE value="minor refactor and cleaning code" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor refactor and cleaning code" />
   </component>
 </project>

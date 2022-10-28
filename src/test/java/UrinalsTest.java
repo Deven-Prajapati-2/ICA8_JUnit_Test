@@ -64,4 +64,25 @@ class UrinalsTest {
         System.out.println("====== Deven Prajapati == TEST FOUR EXECUTED =======");
         assertEquals(expectedOutputFile, actualOutputFile);
     }
+
+    @Test
+    void checkStringLength() {
+        Urinals urinals = new Urinals();
+        System.out.println("====== Deven Prajapati == TEST FIVE EXECUTED =======");
+        assertFalse(urinals.goodString("101010101010010100101010010010100101"));
+    }
+
+    @Test
+    void checkEmptyStringLength() {
+        Urinals urinals = new Urinals();
+        System.out.println("====== Deven Prajapati == TEST FIVE EXECUTED =======");
+        assertFalse(urinals.goodString(""));
+    }
+
+    @Test
+    void checkStringIsBinary() {
+        Urinals urinals = new Urinals();
+        System.out.println("====== Deven Prajapati == TEST SIX EXECUTED =======");
+        assertFalse(urinals.goodString("1010101210"));
+    }
 }
