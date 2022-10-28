@@ -1,26 +1,8 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Urinals {
-    public static void main(String[] args) {
-        Urinals urinals = new Urinals();
-        ArrayList<String> urinalStrings = urinals.readFile();
-        // int size = urinalStrings.size();
-        // int[] maxFreeUrinalCount = new int[size];
-        for(int i=0;i<urinalStrings.size();i++) {
-            int count;
-            if(urinals.goodString(urinalStrings.get(i))) {
-                count = urinals.countMaximumFreeUrinals(urinalStrings.get(i));
-            } else {
-                count = -1;
-            }
-            // maxFreeUrinalCount[i] = count;
-            System.out.println(count);
-        }
-    }
-
+    public static void main(String[] args) {}
     public ArrayList<String> readFile() { // read file and parse all strings
         String path = "C:/Users/Devsec/Desktop/DevGit/ICA8_JUnit_Test/data/urinal.dat";
         ArrayList<String> urinalsStrings = new ArrayList<>();
@@ -51,7 +33,6 @@ public class Urinals {
         backtrack(str,0,0,maxCount);
         return maxCount[0];
     }
-
     public void backtrack(String str, int index, int changeCount, int[] maxCount) {
         int n = str.length();
         if(index == n) {
@@ -79,4 +60,29 @@ public class Urinals {
             backtrack(newStr,index+1,changeCount+1,maxCount);
         }
     }
+    public String createOutputFile(int[] maxFreeUrinalCount) {
+        File outputFile = new File("rule.txt");
+        try {
+            int count = 1, LOOP_COUNT = 100;
+            while (LOOP_COUNT > 0) {
+                if (!outputFile.exists()) break;
+                String outputFileName = "rule" + count + ".txt";
+                outputFile = new File(outputFileName);
+                count++;
+                LOOP_COUNT--;
+            }
+            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
+            for(int i=0;i<maxFreeUrinalCount.length;i++) {
+                writer.write(Integer.toString(maxFreeUrinalCount[i]));
+                writer.write("\n");
+            }
+            writer.write("EOF");
+            writer.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        return outputFile.getPath();
+    }
 }
+
