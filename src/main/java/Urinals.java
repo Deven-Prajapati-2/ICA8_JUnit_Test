@@ -70,7 +70,7 @@ public class Urinals {
         }
     }
 
-    public String createOutputFile(int[] maxFreeUrinalCount, String fileName) {
+    public String createOutputFile(int[] maxFreeUrinalCount, String fileName) throws Exception{
         File outputFile = new File(fileName);
         try {
             int count = 1, LOOP_COUNT = 100;
@@ -89,7 +89,7 @@ public class Urinals {
             writer.close();
         }
         catch (IOException e) {
-            e.printStackTrace();
+            throw e;
         }
         return outputFile.getPath();
     }

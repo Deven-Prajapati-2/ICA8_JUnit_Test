@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="added duplicate output file Junit testcase" />
+    <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="added bad file name unit test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Urinals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Urinals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,11 +61,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UrinalsTest.createOutputFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UrinalsTest.badNameFileWrite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ICA8_JUnit_Test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
-      <option name="METHOD_NAME" value="createOutputFile" />
+      <option name="METHOD_NAME" value="badNameFileWrite" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UrinalsTest.duplicateWriteFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ICA8_JUnit_Test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
+      <option name="METHOD_NAME" value="duplicateWriteFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,16 +86,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
       <option name="METHOD_NAME" value="readEmptyFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UrinalsTest.readFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ICA8_JUnit_Test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
-      <option name="METHOD_NAME" value="readFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -100,10 +104,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UrinalsTest" />
+        <item itemvalue="JUnit.UrinalsTest.duplicateWriteFile" />
+        <item itemvalue="JUnit.UrinalsTest.badNameFileWrite" />
         <item itemvalue="JUnit.UrinalsTest.readEmptyFile" />
         <item itemvalue="JUnit.UrinalsTest.readWrongFile" />
-        <item itemvalue="JUnit.UrinalsTest.readFile" />
-        <item itemvalue="JUnit.UrinalsTest.createOutputFile" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666934689576</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added duplicate output file Junit testcase">
+      <created>1666934767151</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666934767151</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,6 +238,7 @@
     <MESSAGE value="added emptyfile test case" />
     <MESSAGE value="added emptyfile" />
     <MESSAGE value="added duplicate output file Junit testcase" />
-    <option name="LAST_COMMIT_MESSAGE" value="added duplicate output file Junit testcase" />
+    <MESSAGE value="added bad file name unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added bad file name unit test" />
   </component>
 </project>

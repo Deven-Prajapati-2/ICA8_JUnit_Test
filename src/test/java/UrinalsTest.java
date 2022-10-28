@@ -54,11 +54,17 @@ class UrinalsTest {
         expectedOutputFile.add(2);
         expectedOutputFile.add(3);
         int[] testArray = {1,2,3};
-        String path = urinals.createOutputFile(testArray,"rule.txt");
+        String path = "rule.txt";
+        try {
+            path = urinals.createOutputFile(testArray, "rule.txt");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
         ArrayList<Integer> actualOutputFile = new ArrayList<>();
         try {
             BufferedReader reader;
-            reader = new BufferedReader(new FileReader(path));
+                reader = new BufferedReader(new FileReader(path));
             String line = reader.readLine();
             while(line != null) {
                 if(line.equals("-1") || line.equals("EOF")) break;
@@ -123,9 +129,34 @@ class UrinalsTest {
     void duplicateWriteFile() {
         Urinals urinals = new Urinals();
         System.out.println("====== Deven Prajapati == TEST TEN EXECUTED =======");
-        int arr[] = {1,2,3};
-        String path1 = urinals.createOutputFile(arr,"rule.txt");
-        String path2 = urinals.createOutputFile(arr,"rule.txt");
+        int[] arr = new int[]{1,2,3};
+        String path1 = "rule.txt",path2 = "rules.txt";
+        try {
+            path1 = urinals.createOutputFile(arr, "rule.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            path2 = urinals.createOutputFile(arr, "rule.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
         assertNotEquals(path1,path2);
+    }
+    @Test
+    void badNameFileWrite() {
+        Urinals urinals = new Urinals();
+        System.out.println("====== Deven Prajapati == TEST ELEVEN EXECUTED =======");
+        int[] arr = new int[]{1,2,3};
+        String badFileName = "ru/@le.txt";
+        try {
+            Throwable exception = assertThrows(FileNotFoundException.class, () -> urinals.createOutputFile(arr,badFileName));
+            assertEquals("ru\\@le.txt (The system cannot find the path specified)", exception.getMessage());
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
