@@ -24,4 +24,13 @@ class UrinalsTest {
         System.out.println("====== Deven Prajapati == TEST TWO EXECUTED =======");
         assertTrue(urinals.goodString("1010101"));
     }
+    @Test
+    void countMaximumFreeUrinals() {
+        Urinals urinals = new Urinals();
+        String str = "00000";
+        int actualCount = urinals.countMaximumFreeUrinals(str);
+        int expectedCount = 3;
+        System.out.println("====== Deven Prajapati == TEST THREE EXECUTED =======");
+        assertEquals(expectedCount, actualCount);
+    }
 }

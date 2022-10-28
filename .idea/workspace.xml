@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faf56256-cb7d-45e6-9db3-0d4205de20e0" name="Changes" comment="Added fileReader method and it's JUnit testCases">
-      <change afterPath="$PROJECT_DIR$/data/urinal.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/urinal.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/urinal.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Urinals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Urinals.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UrinalsTest.java" afterDir="false" />
     </list>
@@ -52,7 +52,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UrinalsTest.readFile">
+  <component name="RunManager" selected="JUnit.UrinalsTest.countMaximumFreeUrinals">
     <configuration name="Urinals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Urinals" />
       <module name="ICA8_JUnit_Test" />
@@ -65,6 +65,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CalculatorTest" />
       <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UrinalsTest.countMaximumFreeUrinals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ICA8_JUnit_Test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UrinalsTest" />
+      <option name="METHOD_NAME" value="countMaximumFreeUrinals" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,8 +102,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UrinalsTest.readFile" />
+        <item itemvalue="JUnit.UrinalsTest.countMaximumFreeUrinals" />
         <item itemvalue="Application.Urinals" />
+        <item itemvalue="JUnit.UrinalsTest.readFile" />
         <item itemvalue="JUnit.UrinalsTest.goodString" />
         <item itemvalue="JUnit.CalculatorTest.add" />
       </list>
@@ -129,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666914003915</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added fileReader method and it's JUnit testCases">
+      <created>1666915844882</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666915844882</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
